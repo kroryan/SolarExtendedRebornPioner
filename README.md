@@ -1,6 +1,5 @@
 # SolarExtendedRebornPioner
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ac6dac57-59ef-480e-b8cf-b0135d36a63e" />
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/3d66791c-4ecf-4956-a826-76549bafa7f2" />
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ab160b0d-08ce-4ac5-82a0-780e093e48d0" />
 
 
