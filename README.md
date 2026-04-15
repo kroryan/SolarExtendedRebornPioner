@@ -1,40 +1,342 @@
 # SolarExtendedRebornPioner
 
-Modernized Sol Extended system mod assets for Pioneer.
+SolarExtendedRebornPioner is a modernized Sol Extended system mod for Pioneer.
 
-This repository contains the legacy Lua source, the converted Pioneer JSON system file, and the conversion helper used to migrate the old `CustomSystem` / `CustomSystemBody` Sol mod into the current JSON custom-system format.
+It keeps the old hand-written Sol Extended Lua system as source material, ships a converted JSON system for current Pioneer builds, and includes the converter used to rebuild the JSON from the legacy format.
 
-## Included files
+## What This Contains
 
-- `00_sol.lua`: original legacy Lua system definition.
-- `00_sol.json`: converted JSON system definition for current Pioneer builds.
-- `convert_sol_extended.py`: scoped converter for regenerating `00_sol.json` from the legacy Lua file.
+The converted system file, `00_sol.json`, defines a full extended Sol system with 235 total entries:
 
-## Conversion summary
+| Type | Count |
+| --- | ---: |
+| Star | 1 |
+| Terrestrial planets, dwarf planets, moons, and TNOs | 43 |
+| Asteroids, small moons, Trojans, and minor bodies | 46 |
+| Gas giants | 4 |
+| Surface starports and colonies | 109 |
+| Orbital starports and stations | 32 |
 
-The conversion keeps the extended Sol hierarchy and updates the data into the modern JSON system format expected by current Pioneer releases.
+## Files
 
-### Corrected fields
+- `00_sol.json`: modern Pioneer JSON system definition. This is the file to install for current Pioneer.
+- `00_sol.lua`: original legacy Lua system definition kept for reference and regeneration.
+- `convert_sol_extended.py`: converter used to migrate the old `CustomSystem` / `CustomSystemBody` Lua syntax to JSON.
+- `README.md`: this documentation.
+
+## Install
+
+Use the JSON file, not the Lua file.
+
+Copy:
+
+```text
+00_sol.json
+```
+
+to:
+
+```text
+Documents/Pioneer/mods/00_sol_EXTENDED/data/systems/custom/00_sol.json
+```
+
+Important: keep old Lua system files out of `Documents/Pioneer/mods/00_sol_EXTENDED/data/systems`. Pioneer can still recurse through that folder and load legacy Lua definitions, which can make the game appear to ignore the JSON version.
+
+## Full System Inventory
+
+### Star
+
+- Sol
+
+### Inner System
+
+- Mercury
+- 2212 Hephaistos
+- 1866 Sisyphus
+- 3200 Pheathon
+- 1999 JM8
+- Venus
+- Earth
+- Luna
+- Mars
+- Phobos
+- Deimos
+
+### Main Belt and Near-Mars Objects
+
+- Eros
+- Pallas
+- Vesta
+- Hygiea
+- Ceres
+- Psyche
+- Tyche
+- Tycho Brahe
+- Anubis
+- 1429 Pemba
+- 1550 Tito
+- 1607 Mavis
+- 3628 Božněmcová
+
+### Jupiter System
+
+- Jupiter
+- Metis
+- Adrastea
+- Amalthea
+- Thebe
+- Io
+- Europa
+- Ganymede
+- Callisto
+- Themisto
+- Leda
+- Himalia
+- Lysithea
+- Elara
+- Aega
+- 1995 SN55
+
+### Jupiter Trojans
+
+- 624 Hektor
+- 588 Achilles
+- 617 Patroclus
+
+### Saturn System
+
+- Saturn
+- Ymir
+- Mimas
+- Enceladus
+- Tethys
+- Dione
+- Rhea
+- Titan
+- Iapetus
+- Phoebe
+- Hyperion
+- Janus
+- Epimetheus
+
+### Uranus System
+
+- Uranus
+- Miranda
+- Ariel
+- Umbriel
+- Titania
+- Oberon
+
+### Neptune System
+
+- Neptune
+- Larissa
+- Proteus
+- Triton
+- Nereid
+
+### Centaurs, Kuiper Belt, and Outer System
+
+- Chariklo
+- Chiron
+- Nessus
+- Pluto
+- Charon
+- Ixion
+- Makemake
+- MK2
+- Haumea
+- Hi'aka
+- Namaka
+- Gonggong
+- Xiangliu
+- Varuna
+- Quaoar
+- Weywot
+- Arrokoth
+- Orcus
+- Vanth
+- Salacia
+- Actaea
+- 2002 MS4
+- Sedna
+- Eris
+- Dysnomia
+- FarFarOut
+
+## Surface Starports and Colonies
+
+The system includes 109 surface locations:
+
+- Hespestos's Forge
+- Isengard
+- New Bourke
+- Hespestos's Hammer
+- Ephyra Port
+- Near Earth Belter Bar
+- London
+- Stockholm
+- Reykjavík
+- Riga
+- Sofia
+- Athens
+- Rome
+- Barcelona
+- Amsterdam
+- Moscow
+- Samarkand
+- Tokyo
+- Shanghai
+- Singapore
+- Alexandria
+- Dakar
+- Addis Ababa
+- Tshwane Pretoria
+- Kuwait City
+- Beirut
+- Medina
+- Colombo
+- Melbourne
+- Perth
+- Wellington
+- Honolulu
+- Toronto
+- New York
+- Los Angeles
+- Seattle
+- Vancouver
+- Miami
+- Chicago
+- Mexico City
+- Lima
+- Santiago
+- Buenos Aires
+- Rio De Janeiro
+- Havana
+- Ferraz Research Station
+- Tranquility Base
+- Mariasurīru
+- Bradbury Landing
+- Cydonia
+- Olympus Mons
+- Phobos Base
+- Tomm's Sanctuary
+- Eros Base
+- Pallas Base
+- Vesta Base
+- Hygiea City
+- Occator Domes
+- Medena City
+- Tyche Domes
+- Tycho Base
+- Anubis Outpost
+- Pemba Post
+- Tito Outpost
+- Mavis Point
+- Božněmcová Port
+- Thebe Gas Refinery
+- Dante's Base
+- Enki Catena
+- Moria Domes
+- Hektor Waystation
+- Achilles Outpost
+- Patroclus Mining Camp
+- Snelton Observatory
+- Tiger Stripe Base
+- Maneo Landing
+- Oasis City
+- Port Makenzie
+- Phoebe Research Centre
+- Hyperion Cantos
+- Janus Dome
+- Chariklo Outpost
+- Arden Base
+- Weaver Science Outpost
+- Chiron Outpost
+- Artifact's Edge
+- Pluto Research Base
+- Ixion Post
+- Moai Landing
+- Pele Landing
+- Kapo Base
+- Kaha'ula City
+- Laumiha Colony
+- Gonggong Base
+- Xiangliu Base
+- Varuna Relay
+- Out Nowhere
+- Chingichngish
+- Weywot Base
+- New Horizons Memorial
+- Palatine City
+- New Chiusi
+- Mineral Research Base
+- Salacia Colony
+- Nereid Outlook
+- New Longyearbyen
+- Farpoint Base
+- Barbary Landing
+- Out Woop Woop
+
+## Orbital Stations
+
+The system includes 32 orbital stations:
+
+- Helios Station
+- Ikarus's Rest
+- Deadalus's PitStop
+- Venusia Habitation
+- International Space Station
+- Gateway Spaceport
+- Gates Spaceport
+- Jobs Pad
+- Torvalds Platform
+- Armstrong Station
+- Fortuna Station
+- Mars High
+- Proserpina Station
+- RichDig Orbital
+- Tycho Station
+- Clarke's Station
+- Discovery Base
+- Hektor Orbital
+- Cassini Station
+- Daniel's Haven
+- Verona Station
+- Poseidon Station
+- Ahu Tongariki
+- Kauakahi Port
+- Villi Port
+- Wiyot Port
+- Charun Habitat
+- Qesakoloniya
+- Trondheim II
+- Rleyh Outpost
+- Barbarosa Hideout
+- FarAway Station
+
+## Notable Additions and Fixes
+
+### Data Fixes
 
 | Field | Problem | Correction |
 | --- | --- | --- |
-| `Sedna:radius` | `f(867,1000000)` produced an unrealistically tiny body | corrected to a realistic Sedna scale |
-| `Ceres:ice_cover` | `f(100,1)` overflow-style value | corrected to `10%` ice cover |
-| `Eris:radius` | float-like value inside `f()` | corrected to an integer ratio |
-| `FarFarOut:semi_major_axis` | old value placed it too close | corrected to a distant trans-Neptunian orbit |
-| `Sol:long_desc` | placeholder text | replaced with a real system description |
+| `Sedna:radius` | legacy value made Sedna unrealistically tiny | corrected to a realistic dwarf-planet scale |
+| `Ceres:ice_cover` | `f(100,1)` was far outside the expected range | corrected to a sane fractional ice-cover value |
+| `Eris:radius` | old ratio used a float-like value inside `f()` | corrected to an integer-ratio value |
+| `FarFarOut:semi_major_axis` | old value placed it too close to the Sun | corrected to a distant outer-system orbit |
+| `Sol:long_desc` | placeholder text | replaced with a real Sol system description |
 
-### Added bodies
-
-New moons:
+### Added Moons
 
 - Mimas
-- Enceladus
+- Enceladus, including Tiger Stripe Base and Cassini Station
 - Epimetheus
-- Miranda
+- Miranda, including Arden Base and Verona Station
 - Larissa
 
-New solar-system bodies:
+### Added Minor Bodies
 
 - 624 Hektor
 - 588 Achilles
@@ -43,14 +345,19 @@ New solar-system bodies:
 - Varuna
 - Arrokoth
 
-Total added bodies: 11.
+## Converter Notes
 
-## Installing
+`convert_sol_extended.py` is intentionally scoped to this mod. It handles the legacy Pioneer custom-system style:
 
-Copy `00_sol.json` to:
+- `CustomSystem:new(...)`
+- `CustomSystemBody:new(...)`
+- chained body fields such as `:radius(...)`, `:mass(...)`, `:semi_major_axis(...)`, `:latitude(...)`, `:longitude(...)`, `:rings(...)`, and `:height_map(...)`
+- nested `s:bodies(...)` hierarchy reconstruction
 
-```text
-Documents/Pioneer/mods/00_sol_EXTENDED/data/systems/custom/00_sol.json
+Run it from the repository root that contains the expected Pioneer source layout and legacy Lua file.
+
+```powershell
+python tools\convert_sol_extended.py
 ```
 
-Keep legacy Lua system files out of `data/systems` when using the JSON version, otherwise Pioneer may still load the old definition.
+The generated JSON is intended for current Pioneer releases using JSON custom systems.
