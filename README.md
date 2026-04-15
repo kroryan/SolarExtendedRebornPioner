@@ -14,8 +14,8 @@ The converted system file, `00_sol.json`, defines a full extended Sol system wit
 | Terrestrial planets, dwarf planets, moons, and TNOs | 43 |
 | Asteroids, small moons, Trojans, and minor bodies | 46 |
 | Gas giants | 4 |
-| Surface starports and colonies | 56 |
-| Orbital starports and stations | 85 |
+| Surface starports and colonies | 109 |
+| Orbital starports and stations | 32 |
 
 ## Files
 
@@ -167,11 +167,14 @@ Important: keep old Lua system files out of `Documents/Pioneer/mods/00_sol_EXTEN
 
 ## Surface Starports and Colonies
 
-The system includes 56 surface locations:
+The system includes 109 surface locations:
 
 - Hespestos's Forge
 - Isengard
 - New Bourke
+- Hespestos's Hammer
+- Ephyra Port
+- Near Earth Belter Bar
 - London
 - Stockholm
 - Reykjavík
@@ -217,25 +220,72 @@ The system includes 56 surface locations:
 - Bradbury Landing
 - Cydonia
 - Olympus Mons
+- Phobos Base
+- Tomm's Sanctuary
+- Eros Base
+- Pallas Base
+- Vesta Base
+- Hygiea City
 - Occator Domes
 - Medena City
+- Tyche Domes
+- Tycho Base
+- Anubis Outpost
+- Pemba Post
+- Tito Outpost
+- Mavis Point
+- Božněmcová Port
+- Thebe Gas Refinery
+- Dante's Base
+- Enki Catena
+- Moria Domes
+- Hektor Waystation
+- Achilles Outpost
+- Patroclus Mining Camp
+- Snelton Observatory
+- Tiger Stripe Base
+- Maneo Landing
 - Oasis City
 - Port Makenzie
+- Phoebe Research Centre
+- Hyperion Cantos
+- Janus Dome
+- Chariklo Outpost
+- Arden Base
+- Weaver Science Outpost
+- Chiron Outpost
+- Artifact's Edge
 - Pluto Research Base
+- Ixion Post
+- Moai Landing
+- Pele Landing
+- Kapo Base
+- Kaha'ula City
+- Laumiha Colony
 - Gonggong Base
+- Xiangliu Base
+- Varuna Relay
+- Out Nowhere
+- Chingichngish
+- Weywot Base
+- New Horizons Memorial
+- Palatine City
+- New Chiusi
 - Mineral Research Base
 - Salacia Colony
+- Nereid Outlook
+- New Longyearbyen
+- Farpoint Base
+- Barbary Landing
+- Out Woop Woop
 
 ## Orbital Stations
 
-The system includes 85 orbital stations and orbitalized outposts. Several legacy surface bases on very rough or unstable procedural terrain are intentionally orbitalized to avoid Pioneer automatically relocating pads or reporting them as underwater.
+The system includes 32 orbital stations:
 
 - Helios Station
 - Ikarus's Rest
 - Deadalus's PitStop
-- Hespestos's Hammer
-- Ephyra Port
-- Near Earth Belter Bar
 - Venusia Habitation
 - International Space Station
 - Gateway Spaceport
@@ -245,75 +295,25 @@ The system includes 85 orbital stations and orbitalized outposts. Several legacy
 - Armstrong Station
 - Fortuna Station
 - Mars High
-- Phobos Base
-- Tomm's Sanctuary
-- Eros Base
-- Pallas Base
-- Vesta Base
-- Hygiea City
 - Proserpina Station
 - RichDig Orbital
-- Tyche Domes
-- Tycho Base
 - Tycho Station
-- Anubis Outpost
-- Pemba Post
-- Tito Outpost
-- Mavis Point
-- Božněmcová Port
-- Thebe Gas Refinery
-- Dante's Base
 - Clarke's Station
-- Enki Catena
-- Moria Domes
 - Discovery Base
-- Hektor Waystation
 - Hektor Orbital
-- Achilles Outpost
-- Patroclus Mining Camp
-- Snelton Observatory
 - Cassini Station
-- Tiger Stripe Base
-- Maneo Landing
 - Daniel's Haven
-- Phoebe Research Centre
-- Hyperion Cantos
-- Janus Dome
-- Chariklo Outpost
 - Verona Station
-- Arden Base
-- Weaver Science Outpost
-- Chiron Outpost
 - Poseidon Station
-- Artifact's Edge
-- Ixion Post
-- Moai Landing
 - Ahu Tongariki
-- Pele Landing
-- Kapo Base
 - Kauakahi Port
-- Kaha'ula City
-- Laumiha Colony
 - Villi Port
-- Xiangliu Base
-- Varuna Relay
-- Out Nowhere
-- Chingichngish
 - Wiyot Port
-- Weywot Base
-- New Horizons Memorial
-- Palatine City
 - Charun Habitat
-- New Chiusi
 - Qesakoloniya
-- Nereid Outlook
-- New Longyearbyen
 - Trondheim II
-- Farpoint Base
 - Rleyh Outpost
-- Barbary Landing
 - Barbarosa Hideout
-- Out Woop Woop
 - FarAway Station
 
 ## Notable Additions and Fixes
@@ -328,7 +328,6 @@ The system includes 85 orbital stations and orbitalized outposts. Several legacy
 | `FarFarOut:semi_major_axis` | old value placed it too close to the Sun | corrected to a distant outer-system orbit |
 | `Sol:long_desc` | placeholder text | replaced with a real Sol system description |
 | Legacy nested moon outposts | several bases were accidentally parented to Jupiter, Saturn, Uranus, Gonggong, Quaoar, Orcus, Salacia, or Haumea instead of their moons | repaired parent-child hierarchy |
-| Rough-terrain surface bases | Pioneer relocated or rejected many pads as buried/underwater | converted unstable legacy outposts to orbital stations |
 
 ### Added Moons
 
