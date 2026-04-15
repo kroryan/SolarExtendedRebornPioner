@@ -4,6 +4,8 @@ SolarExtendedRebornPioner is a modernized Sol Extended system mod for Pioneer.
 
 It keeps the old hand-written Sol Extended Lua system as source material, ships a converted JSON system for current Pioneer builds, and includes the converter used to rebuild the JSON from the legacy format.
 
+The current JSON also preserves the surface settlements instead of converting them to orbital stations. The converter applies explicit parent and latitude/longitude repairs for legacy entries that current Pioneer otherwise reports as automatically relocated or placed on the wrong parent body.
+
 ## What This Contains
 
 The converted system file, `00_sol.json`, defines a full extended Sol system with 235 total entries:
@@ -23,6 +25,14 @@ The converted system file, `00_sol.json`, defines a full extended Sol system wit
 - `00_sol.lua`: original legacy Lua system definition kept for reference and regeneration.
 - `convert_sol_extended.py`: converter used to migrate the old `CustomSystem` / `CustomSystemBody` Lua syntax to JSON.
 - `README.md`: this documentation.
+
+## Compatibility Fixes
+
+- Converts the old hand-written Lua system definition to current Pioneer JSON.
+- Keeps all 109 surface starports as surface starports.
+- Repairs legacy hierarchy issues where surface ports were attached to the wrong body.
+- Applies corrected latitude/longitude values for the surface ports reported by Pioneer as auto-relocated in the startup log.
+- Keeps the original Lua file as source/reference, but the installable system file is `00_sol.json`.
 
 ## Install
 

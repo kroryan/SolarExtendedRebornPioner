@@ -65,6 +65,48 @@ STARPORT_PARENT_FIXES = {
     "Nereid Outlook": "Actaea",
 }
 
+SURFACE_COORD_FIXES = {
+    "Achilles Outpost": (-0.483636978195465, 6.2638740120408),
+    "Alexandria": (-0.956923867539234, 0.675536350388761),
+    "Amsterdam": (0.311950984304204, 4.88264074558787),
+    "Anubis Outpost": (-0.307951568805545, 0.651611903019734),
+    "Arden Base": (0.380353910250444, 1.84703734948535),
+    "Beirut": (-0.279032116605488, 4.09123502299262),
+    "Bradbury Landing": (-0.340721198380826, 3.79823098601592),
+    "Chariklo Outpost": (-0.0584122218152421, 3.2622387691891),
+    "Chingichngish": (-0.874619895842831, 4.47247075279463),
+    "Dakar": (0.80956166449879, 4.8065801288328),
+    "Ephyra Port": (-0.0263176222631304, 4.42133157256669),
+    "Eros Base": (-0.525897679460687, 1.29530195777296),
+    "Farpoint Base": (-0.0661441684138334, 0.413551316414602),
+    "Havana": (-0.455532717098466, 4.25159266946984),
+    "Hektor Waystation": (-0.91939218718038, 4.72678275779928),
+    "Hespestos's Hammer": (-0.0273474980673326, 4.32367949857968),
+    "Hygiea City": (-0.765488724227903, 3.80661042440822),
+    "Hyperion Cantos": (-0.720249765096634, 1.59886369664914),
+    "Ixion Post": (0.194754743308887, 3.21117911143653),
+    "Janus Dome": (0.50971827117242, 0.311301357101331),
+    "Kaha'ula City": (-0.488297542055512, 5.60551890527959),
+    "Laumiha Colony": (-0.179598895732689, 1.34749186954991),
+    "Maneo Landing": (0.884962055638111, 3.65202597398963),
+    "Moai Landing": (-0.665694365539592, 1.28243097909241),
+    "New Horizons Memorial": (-0.0767576370651899, 2.81716456476354),
+    "New Longyearbyen": (-0.49720430511542, 5.53492440260507),
+    "Out Nowhere": (-0.365337716831275, 1.14284032186501),
+    "Pele Landing": (0.615458712001738, 4.80741504601911),
+    "Pemba Post": (0.0661502280200088, 2.87076473521533),
+    "Rio De Janeiro": (0.809225799961301, 5.17709543004006),
+    "Samarkand": (-0.425964922146579, 4.00236285151351),
+    "Snelton Observatory": (-0.0527284224619962, 2.03972608536784),
+    "Thebe Gas Refinery": (0.858593781077948, 5.83382406789009),
+    "Tito Outpost": (0.710649508684866, 3.2081695678833),
+    "Tomm's Sanctuary": (0.955707059562568, 6.03647118757716),
+    "Tycho Base": (-0.243006199256428, 0.90430587228138),
+    "Varuna Relay": (0.676546178913789, 3.07439246866868),
+    "Weywot Base": (0.268126370411498, 1.21855994614663),
+    "Xiangliu Base": (-0.873549479397201, 1.33522405953216),
+}
+
 
 @dataclass(eq=False)
 class Body:
@@ -349,6 +391,15 @@ def repair_legacy_hierarchy(ordered: list[Body]) -> None:
             move_child(child, parent, ordered)
 
 
+def apply_surface_coord_fixes(ordered: list[Body]) -> None:
+    by_name = {body.name: body for body in ordered}
+    for body_name, (latitude, longitude) in SURFACE_COORD_FIXES.items():
+        body = by_name.get(body_name)
+        if body and body.type == "STARPORT_SURFACE":
+            body.fields["inclination"] = latitude
+            body.fields["orbitalOffset"] = longitude
+
+
 def make_json(root: Body, ordered: list[Body]) -> dict[str, Any]:
     index = {body: idx for idx, body in enumerate(ordered)}
     body_nodes = []
@@ -422,6 +473,7 @@ def main() -> None:
     ordered = [root]
     add_children(root, TableNode(parse_entries(lines, bodies_start + 1, main_end - 1, body_by_line)), variables, ordered)
     repair_legacy_hierarchy(ordered)
+    apply_surface_coord_fixes(ordered)
 
     data = make_json(root, ordered)
 
