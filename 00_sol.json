@@ -408,14 +408,14 @@
 		{
 			"seed": 0,
 			"name": "Hespestos's Hammer",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.002230530784048753,
 			"orbitalPhase": 4.681115831481529,
@@ -483,14 +483,14 @@
 		{
 			"seed": 0,
 			"name": "Ephyra Port",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.002230530784048753,
 			"orbitalPhase": 3.1725782982989683,
@@ -594,14 +594,14 @@
 		{
 			"seed": 0,
 			"name": "Near Earth Belter Bar",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.002230530784048753,
 			"orbitalPhase": 3.006646180663881,
@@ -784,10 +784,7 @@
 				60,
 				61,
 				62,
-				63,
-				64,
-				65,
-				66
+				63
 			],
 			"parent": 0
 		},
@@ -2447,6 +2444,11 @@
 			"hasRings": false,
 			"heightMapFilename": "heightmaps/moon.hmap",
 			"heightMapFractal": 1,
+			"children": [
+				64,
+				65,
+				66
+			],
 			"parent": 17
 		},
 		{
@@ -2483,7 +2485,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 17
+			"parent": 63
 		},
 		{
 			"seed": 0,
@@ -2520,7 +2522,7 @@
 			"agricultural": 0,
 			"hasRings": false,
 			"spaceStationType": "ground_station",
-			"parent": 17
+			"parent": 63
 		},
 		{
 			"seed": 0,
@@ -2556,7 +2558,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 17
+			"parent": 63
 		},
 		{
 			"seed": 1,
@@ -2636,9 +2638,7 @@
 				71,
 				72,
 				73,
-				74,
-				75,
-				76
+				75
 			],
 			"parent": 0
 		},
@@ -2820,19 +2820,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				74
+			],
 			"parent": 68
 		},
 		{
 			"seed": 0,
 			"name": "Phobos Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 5.799121970149161,
@@ -2856,7 +2859,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 68
+			"parent": 73
 		},
 		{
 			"seed": 4591319,
@@ -2892,19 +2895,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				76
+			],
 			"parent": 68
 		},
 		{
 			"seed": 0,
 			"name": "Tomm's Sanctuary",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 6.110767982344945,
 			"orbitalPhase": 4.063592760136645,
@@ -2928,7 +2934,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 68
+			"parent": 75
 		},
 		{
 			"seed": 5181519,
@@ -2972,14 +2978,14 @@
 		{
 			"seed": 0,
 			"name": "Eros Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 4.99334919689456,
@@ -3047,14 +3053,14 @@
 		{
 			"seed": 0,
 			"name": "Pallas Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 1.6332864025936709,
@@ -3122,14 +3128,14 @@
 		{
 			"seed": 0,
 			"name": "Vesta Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 0.38076273175164493,
@@ -3197,14 +3203,14 @@
 		{
 			"seed": 0,
 			"name": "Hygiea City",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 3.3980176617324855,
@@ -3496,14 +3502,14 @@
 		{
 			"seed": 0,
 			"name": "Tyche Domes",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 1.5049387071199276,
@@ -3572,14 +3578,14 @@
 		{
 			"seed": 0,
 			"name": "Tycho Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 3.095113478779891,
@@ -3683,14 +3689,14 @@
 		{
 			"seed": 0,
 			"name": "Anubis Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 2.725106511915543,
@@ -3758,14 +3764,14 @@
 		{
 			"seed": 0,
 			"name": "Pemba Post",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 3.7133468773839784,
@@ -3833,14 +3839,14 @@
 		{
 			"seed": 0,
 			"name": "Tito Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 2.3514312365139234,
@@ -3908,14 +3914,14 @@
 		{
 			"seed": 0,
 			"name": "Mavis Point",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 5.219141900887435,
@@ -3983,14 +3989,14 @@
 		{
 			"seed": 0,
 			"name": "Božněmcová Port",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.08726646259971647,
 			"orbitalPhase": 4.307156908587858,
@@ -4063,15 +4069,10 @@
 				108,
 				109,
 				110,
-				111,
 				112,
-				113,
 				114,
-				115,
 				116,
-				117,
 				118,
-				119,
 				120,
 				121,
 				122,
@@ -4224,19 +4225,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				111
+			],
 			"parent": 106
 		},
 		{
 			"seed": 0,
 			"name": "Thebe Gas Refinery",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.3700098014227979,
 			"orbitalPhase": 1.580803475278004,
@@ -4260,7 +4264,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 106
+			"parent": 110
 		},
 		{
 			"seed": 4294966381,
@@ -4296,19 +4300,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				113
+			],
 			"parent": 106
 		},
 		{
 			"seed": 0,
 			"name": "Dante's Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.16598081186466074,
 			"orbitalPhase": 4.999529075659631,
@@ -4332,7 +4339,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 106
+			"parent": 112
 		},
 		{
 			"seed": 916847865,
@@ -4368,6 +4375,9 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				115
+			],
 			"parent": 106
 		},
 		{
@@ -4404,7 +4414,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 106
+			"parent": 114
 		},
 		{
 			"seed": 1871930487,
@@ -4440,19 +4450,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				117
+			],
 			"parent": 106
 		},
 		{
 			"seed": 0,
 			"name": "Enki Catena",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.6755160819145565,
 			"orbitalPhase": 2.8789025473557195,
@@ -4476,7 +4489,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 106
+			"parent": 116
 		},
 		{
 			"seed": 2572869711,
@@ -4512,19 +4525,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				119
+			],
 			"parent": 106
 		},
 		{
 			"seed": 0,
 			"name": "Moria Domes",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 5.893323194139267,
@@ -4548,7 +4564,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 106
+			"parent": 118
 		},
 		{
 			"seed": 0,
@@ -4845,14 +4861,14 @@
 		{
 			"seed": 0,
 			"name": "Hektor Waystation",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.7853981633974483,
 			"orbitalPhase": 3.8824646693794906,
@@ -4956,14 +4972,14 @@
 		{
 			"seed": 0,
 			"name": "Achilles Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -2.0943951023931953,
 			"orbitalPhase": 2.969800868109649,
@@ -5031,14 +5047,14 @@
 		{
 			"seed": 0,
 			"name": "Patroclus Mining Camp",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.3089969389957472,
 			"orbitalPhase": 2.368731597217144,
@@ -5106,14 +5122,14 @@
 		{
 			"seed": 0,
 			"name": "Snelton Observatory",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.6755160819145565,
 			"orbitalPhase": 6.2244751580789215,
@@ -5185,23 +5201,14 @@
 				137,
 				138,
 				139,
-				140,
-				141,
 				142,
 				143,
 				144,
-				145,
 				146,
-				147,
-				148,
-				149,
 				150,
 				151,
-				152,
 				153,
-				154,
 				155,
-				156,
 				157
 			],
 			"parent": 0
@@ -5312,6 +5319,10 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				140,
+				141
+			],
 			"parent": 136
 		},
 		{
@@ -5348,19 +5359,19 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 139
 		},
 		{
 			"seed": 0,
 			"name": "Tiger Stripe Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.0,
 			"orbitalPhase": 5.250868524071183,
@@ -5384,7 +5395,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 139
 		},
 		{
 			"seed": 2052082519,
@@ -5492,19 +5503,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				145
+			],
 			"parent": 136
 		},
 		{
 			"seed": 0,
 			"name": "Maneo Landing",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 2.9544596151495983,
@@ -5528,7 +5542,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 144
 		},
 		{
 			"seed": 21921114,
@@ -5564,6 +5578,11 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				147,
+				148,
+				149
+			],
 			"parent": 136
 		},
 		{
@@ -5600,7 +5619,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 146
 		},
 		{
 			"seed": 0,
@@ -5636,7 +5655,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 146
 		},
 		{
 			"seed": 0,
@@ -5672,7 +5691,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 146
 		},
 		{
 			"seed": 3650944653,
@@ -5744,19 +5763,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				152
+			],
 			"parent": 136
 		},
 		{
 			"seed": 0,
 			"name": "Phoebe Research Centre",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 0.7168057444999985,
@@ -5780,7 +5802,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 151
 		},
 		{
 			"seed": 531380783,
@@ -5816,19 +5838,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				154
+			],
 			"parent": 136
 		},
 		{
 			"seed": 0,
 			"name": "Hyperion Cantos",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 3.0426451564642885,
@@ -5852,7 +5877,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 153
 		},
 		{
 			"seed": 531380783,
@@ -5888,19 +5913,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				156
+			],
 			"parent": 136
 		},
 		{
 			"seed": 0,
 			"name": "Janus Dome",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 4.358952657992907,
@@ -5924,7 +5952,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 136
+			"parent": 155
 		},
 		{
 			"seed": 3698627950,
@@ -6004,14 +6032,14 @@
 		{
 			"seed": 0,
 			"name": "Chariklo Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.6755160819145565,
 			"orbitalPhase": 0.39819774741768293,
@@ -6081,12 +6109,9 @@
 			],
 			"children": [
 				161,
-				162,
-				163,
 				164,
 				165,
 				166,
-				167,
 				168
 			],
 			"parent": 0
@@ -6125,6 +6150,10 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				162,
+				163
+			],
 			"parent": 160
 		},
 		{
@@ -6161,19 +6190,19 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 160
+			"parent": 161
 		},
 		{
 			"seed": 0,
 			"name": "Arden Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 2.443460952792061,
 			"orbitalPhase": 1.9331806295912874,
@@ -6197,7 +6226,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 160
+			"parent": 161
 		},
 		{
 			"seed": 1189512,
@@ -6305,19 +6334,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				167
+			],
 			"parent": 160
 		},
 		{
 			"seed": 0,
 			"name": "Weaver Science Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 2.6274980531153704,
@@ -6341,7 +6373,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 160
+			"parent": 166
 		},
 		{
 			"seed": 1525181514,
@@ -6421,14 +6453,14 @@
 		{
 			"seed": 0,
 			"name": "Chiron Outpost",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.6755160819145565,
 			"orbitalPhase": 1.1844161411543936,
@@ -6500,7 +6532,6 @@
 				172,
 				173,
 				174,
-				175,
 				176
 			],
 			"parent": 0
@@ -6611,6 +6642,9 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				175
+			],
 			"parent": 171
 		},
 		{
@@ -6647,7 +6681,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 171
+			"parent": 174
 		},
 		{
 			"seed": 14518594,
@@ -6727,14 +6761,14 @@
 		{
 			"seed": 0,
 			"name": "Artifact's Edge",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.6755160819145565,
 			"orbitalPhase": 4.903559141523574,
@@ -6914,14 +6948,14 @@
 		{
 			"seed": 0,
 			"name": "Ixion Post",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 1.0471975511965976,
 			"orbitalPhase": 4.370571624509722,
@@ -7027,14 +7061,14 @@
 		{
 			"seed": 0,
 			"name": "Moai Landing",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 3.904259955309291,
@@ -7135,23 +7169,21 @@
 				190,
 				191,
 				192,
-				193,
-				194,
-				195
+				194
 			],
 			"parent": 0
 		},
 		{
 			"seed": 0,
 			"name": "Pele Landing",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.0,
 			"orbitalPhase": 0.54567218648941,
@@ -7180,14 +7212,14 @@
 		{
 			"seed": 0,
 			"name": "Kapo Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.0,
 			"orbitalPhase": 0.3319408357581694,
@@ -7283,19 +7315,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				193
+			],
 			"parent": 188
 		},
 		{
 			"seed": 0,
 			"name": "Kaha'ula City",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -2.9670597283903604,
 			"orbitalPhase": 2.413483096411736,
@@ -7319,7 +7354,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 188
+			"parent": 192
 		},
 		{
 			"seed": 141131111,
@@ -7355,19 +7390,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				195
+			],
 			"parent": 188
 		},
 		{
 			"seed": 0,
 			"name": "Laumiha Colony",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -2.9670597283903604,
 			"orbitalPhase": 0.1765149860501403,
@@ -7391,7 +7429,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 188
+			"parent": 194
 		},
 		{
 			"seed": 2183144011,
@@ -7430,8 +7468,7 @@
 			"children": [
 				197,
 				198,
-				199,
-				200
+				199
 			],
 			"parent": 0
 		},
@@ -7541,19 +7578,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				200
+			],
 			"parent": 196
 		},
 		{
 			"seed": 0,
 			"name": "Xiangliu Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.449375158498736,
 			"orbitalPhase": 2.3919340848011195,
@@ -7577,7 +7617,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 196
+			"parent": 199
 		},
 		{
 			"seed": 200002119,
@@ -7621,14 +7661,14 @@
 		{
 			"seed": 0,
 			"name": "Varuna Relay",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -2.792526803190927,
 			"orbitalPhase": 1.0401153774771252,
@@ -7692,22 +7732,21 @@
 				204,
 				205,
 				206,
-				207,
-				208
+				207
 			],
 			"parent": 0
 		},
 		{
 			"seed": 0,
 			"name": "Out Nowhere",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.449375158498736,
 			"orbitalPhase": 0.9101011279055146,
@@ -7736,14 +7775,14 @@
 		{
 			"seed": 0,
 			"name": "Chingichngish",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.449375158498736,
 			"orbitalPhase": 4.074061624948933,
@@ -7839,19 +7878,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				208
+			],
 			"parent": 203
 		},
 		{
 			"seed": 0,
 			"name": "Weywot Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.0,
 			"orbitalPhase": 5.091814776371667,
@@ -7875,7 +7917,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 203
+			"parent": 207
 		},
 		{
 			"seed": 574614723,
@@ -7919,14 +7961,14 @@
 		{
 			"seed": 0,
 			"name": "New Horizons Memorial",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": 0.0,
 			"orbitalPhase": 2.613220348473443,
@@ -7989,22 +8031,21 @@
 			"children": [
 				212,
 				213,
-				214,
-				215
+				214
 			],
 			"parent": 0
 		},
 		{
 			"seed": 0,
 			"name": "Palatine City",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.21794799034279191,
 			"orbitalPhase": 5.571116055665653,
@@ -8100,19 +8141,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				215
+			],
 			"parent": 211
 		},
 		{
 			"seed": 0,
 			"name": "New Chiusi",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -0.21794799034279191,
 			"orbitalPhase": 1.6418364655987276,
@@ -8136,7 +8180,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 211
+			"parent": 214
 		},
 		{
 			"seed": 191121391,
@@ -8176,8 +8220,7 @@
 				217,
 				218,
 				219,
-				220,
-				221
+				220
 			],
 			"parent": 0
 		},
@@ -8323,19 +8366,22 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"children": [
+				221
+			],
 			"parent": 216
 		},
 		{
 			"seed": 0,
 			"name": "Nereid Outlook",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -1.2255352941653783,
 			"orbitalPhase": 3.6778070274370473,
@@ -8359,7 +8405,7 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
-			"parent": 216
+			"parent": 220
 		},
 		{
 			"seed": 2002134,
@@ -8404,14 +8450,14 @@
 		{
 			"seed": 0,
 			"name": "New Longyearbyen",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -1.2255352941653783,
 			"orbitalPhase": 1.4973845155823273,
@@ -8516,14 +8562,14 @@
 		{
 			"seed": 0,
 			"name": "Farpoint Base",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 1.9563651278146015,
@@ -8629,14 +8675,14 @@
 		{
 			"seed": 0,
 			"name": "Barbary Landing",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 3.753045832157338,
@@ -8777,14 +8823,14 @@
 		{
 			"seed": 0,
 			"name": "Out Woop Woop",
-			"type": "STARPORT_SURFACE",
+			"type": "STARPORT_ORBITAL",
 			"radius": 0,
 			"aspectRatio": 1,
 			"mass": 0,
-			"rotationPeriod": 0,
+			"rotationPeriod": 0.0002314814814814815,
 			"rotationPhase": 0,
 			"humanActivity": 0,
-			"semiMajorAxis": 0,
+			"semiMajorAxis": 5e-05,
 			"eccentricity": 0,
 			"orbitalOffset": -5.291838292046807,
 			"orbitalPhase": 2.4342627115331683,

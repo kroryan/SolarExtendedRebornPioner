@@ -18,10 +18,11 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
-LUA_PATH = ROOT / "00_sol_EXTENDED.lua"
-OUT_PATH = ROOT / "pioneer" / "data" / "systems" / "custom" / "00_sol.json"
-BACKUP_PATH = ROOT / "pioneer" / "data" / "systems" / "custom" / "00_sol_vanilla_2026_backup.json.disabled"
+SCRIPT_DIR = Path(__file__).resolve().parent
+ROOT = SCRIPT_DIR.parent
+LUA_PATH = SCRIPT_DIR / "00_sol.lua" if (SCRIPT_DIR / "00_sol.lua").exists() else ROOT / "00_sol_EXTENDED.lua"
+OUT_PATH = SCRIPT_DIR / "00_sol.json" if (SCRIPT_DIR / "00_sol.lua").exists() else ROOT / "pioneer" / "data" / "systems" / "custom" / "00_sol.json"
+BACKUP_PATH = OUT_PATH.with_name("00_sol_vanilla_2026_backup.json.disabled")
 
 
 BODY_RE = re.compile(
@@ -53,6 +54,71 @@ FIELD_MAP = {
     "inclination": "inclination",
     "latitude": "inclination",
     "longitude": "orbitalOffset",
+}
+
+STARPORT_PARENT_FIXES = {
+    "Kaha'ula City": "Hi'aka",
+    "Laumiha Colony": "Namaka",
+    "Xiangliu Base": "Xiangliu",
+    "Weywot Base": "Weywot",
+    "New Chiusi": "Vanth",
+    "Nereid Outlook": "Actaea",
+}
+
+ORBITALIZE_SURFACE_PORTS = {
+    "Hespestos's Hammer",
+    "Ephyra Port",
+    "Near Earth Belter Bar",
+    "Phobos Base",
+    "Tomm's Sanctuary",
+    "Eros Base",
+    "Pallas Base",
+    "Vesta Base",
+    "Hygiea City",
+    "Tyche Domes",
+    "Tycho Base",
+    "Anubis Outpost",
+    "Pemba Post",
+    "Tito Outpost",
+    "Mavis Point",
+    "Božněmcová Port",
+    "Thebe Gas Refinery",
+    "Dante's Base",
+    "Enki Catena",
+    "Moria Domes",
+    "Hektor Waystation",
+    "Achilles Outpost",
+    "Patroclus Mining Camp",
+    "Snelton Observatory",
+    "Tiger Stripe Base",
+    "Maneo Landing",
+    "Phoebe Research Centre",
+    "Hyperion Cantos",
+    "Janus Dome",
+    "Chariklo Outpost",
+    "Arden Base",
+    "Weaver Science Outpost",
+    "Chiron Outpost",
+    "Artifact's Edge",
+    "Ixion Post",
+    "Moai Landing",
+    "Pele Landing",
+    "Kapo Base",
+    "Kaha'ula City",
+    "Laumiha Colony",
+    "Xiangliu Base",
+    "Varuna Relay",
+    "Out Nowhere",
+    "Chingichngish",
+    "Weywot Base",
+    "New Horizons Memorial",
+    "Palatine City",
+    "New Chiusi",
+    "Nereid Outlook",
+    "New Longyearbyen",
+    "Farpoint Base",
+    "Barbary Landing",
+    "Out Woop Woop",
 }
 
 
@@ -273,7 +339,7 @@ def parse_entries(lines: list[str], start: int, end: int, body_by_line: dict[int
     idx = start
     while idx <= end:
         line = strip_comment(lines[idx]).strip()
-        if not line or line in ("{", "}", "},"):
+        if not line or line in ("}", "},"):
             idx += 1
             continue
         if "CustomSystemBody:new" in line:
@@ -322,6 +388,32 @@ def add_children(parent: Body, table: TableNode, variables: dict[str, Any], orde
             idx += 1
 
 
+def move_child(body: Body, new_parent: Body, ordered: list[Body]) -> None:
+    for possible_parent in ordered:
+        if body in possible_parent.children:
+            possible_parent.children.remove(body)
+    if body not in new_parent.children:
+        new_parent.children.append(body)
+
+
+def repair_legacy_hierarchy(ordered: list[Body]) -> None:
+    by_name = {body.name: body for body in ordered}
+    for child_name, parent_name in STARPORT_PARENT_FIXES.items():
+        child = by_name.get(child_name)
+        parent = by_name.get(parent_name)
+        if child and parent:
+            move_child(child, parent, ordered)
+
+
+def orbitalize_unstable_surface_ports(system: dict[str, Any]) -> None:
+    for body in system["bodies"]:
+        if body["name"] not in ORBITALIZE_SURFACE_PORTS or body["type"] != "STARPORT_SURFACE":
+            continue
+        body["type"] = "STARPORT_ORBITAL"
+        body["semiMajorAxis"] = body.get("semiMajorAxis") or 0.00005
+        body["rotationPeriod"] = body.get("rotationPeriod") or (1 / (24 * 60 * 3))
+
+
 def make_json(root: Body, ordered: list[Body]) -> dict[str, Any]:
     index = {body: idx for idx, body in enumerate(ordered)}
     body_nodes = []
@@ -335,7 +427,7 @@ def make_json(root: Body, ordered: list[Body]) -> dict[str, Any]:
                     node["parent"] = index[possible_parent]
                     break
         body_nodes.append(node)
-    return {
+    system = {
         "name": "Sol",
         "stars": ["STAR_G"],
         "sector": [0, 0, 0],
@@ -358,6 +450,8 @@ def make_json(root: Body, ordered: list[Body]) -> dict[str, Any]:
         "comment": "Converted from 00_sol_EXTENDED.lua for the JSON System Editor era.",
         "bodies": body_nodes,
     }
+    orbitalize_unstable_surface_ports(system)
+    return system
 
 
 def main() -> None:
@@ -394,6 +488,7 @@ def main() -> None:
     root = variables["sol"]
     ordered = [root]
     add_children(root, TableNode(parse_entries(lines, bodies_start + 1, main_end - 1, body_by_line)), variables, ordered)
+    repair_legacy_hierarchy(ordered)
 
     data = make_json(root, ordered)
 
