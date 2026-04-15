@@ -52,12 +52,6 @@ Documents/Pioneer/mods/00_sol_EXTENDED/data/systems/custom/00_sol.json
 
 Important: keep old Lua system files out of `Documents/Pioneer/mods/00_sol_EXTENDED/data/systems`. Pioneer can still recurse through that folder and load legacy Lua definitions, which can make the game appear to ignore the JSON version.
 
-If Pioneer still reports the old surface-starport warnings after updating `00_sol.json`, check for stale copies in other active development or install trees. During testing, the same corrected JSON was synchronized to:
-
-- `D:/Pioneer/data/systems/custom/00_sol.json`
-- `C:/Users/adryl/Pioneer/pioneer/data/systems/custom/00_sol.json`
-- `C:/Users/adryl/Documents/Pioneer/mods/00_sol_EXTENDED/data/systems/custom/00_sol.json`
-
 ## Full System Inventory
 
 ### Star
