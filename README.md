@@ -6,6 +6,24 @@ It keeps the old hand-written Sol Extended Lua system as source material, ships 
 
 The current JSON also preserves the surface settlements instead of converting them to orbital stations. The converter applies explicit parent and latitude/longitude repairs for legacy entries that current Pioneer otherwise reports as automatically relocated or placed on the wrong parent body.
 
+## Original Work
+
+This project is a maintained / converted version of the original **Sol Extended** custom system by **CMDR ARGHouse**, first shared on the Pioneer development forum:
+
+- Original forum topic: [Sol Extended](https://forum.pioneerspacesim.net/viewtopic.php?t=683)
+- Original author: CMDR ARGHouse
+- First public development post: 2021-09-28
+
+The original forum thread describes the goal of expanding Sol with major asteroids, dwarf planets, extra stations, and a denser inhabited Earth. Later posts list additions such as Pallas, Vesta, Hygiea, 1866 Sisyphus, 2212 Hephaistos, Tycho Brahe, Chiron, Nessus, Janus, Hyperion, Ymir, Chariklo, Salacia and Actaea, Orcus and Vanth, Makemake and MK2, Quaoar and Weywot, Sedna, Eris and Dysnomia, Gonggong and Xiangliu, Haumea, Hi'aka and Namaka, FarFarOut, and multiple new ports and transit stations.
+
+This repository keeps that work credited and adapts it for current Pioneer JSON system definitions.
+
+## License
+
+Pioneer is licensed under the GNU General Public License version 3. This converted mod is distributed under the GPL-3.0 license as a derivative / compatibility update of a Pioneer custom system.
+
+See `LICENSE` for the full GPL-3.0 text.
+
 ## What This Contains
 
 The converted system file, `00_sol.json`, defines a full extended Sol system with 235 total entries:
