@@ -475,6 +475,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				11
 			],
@@ -1304,10 +1306,10 @@
 			"humanActivity": 0,
 			"semiMajorAxis": 0,
 			"eccentricity": 0,
-			"orbitalOffset": 0.522179822916428,
+			"orbitalOffset": 0.575958653158129,
 			"orbitalPhase": 5.354640888633489,
 			"axialTilt": 0,
-			"inclination": 0.544544471951483,
+			"inclination": 0.488692190558413,
 			"argOfPeriapsis": 1.6154429243197306,
 			"averageTemp": 0,
 			"metallicity": 0,
@@ -2970,6 +2972,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				78
 			],
@@ -3195,6 +3199,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				84
 			],
@@ -3756,6 +3762,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				99
 			],
@@ -3831,6 +3839,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				101
 			],
@@ -4225,6 +4235,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				111
 			],
@@ -4852,6 +4864,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				128,
 				129
@@ -4964,6 +4978,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				131
 			],
@@ -5114,6 +5130,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				135
 			],
@@ -5913,6 +5931,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				156
 			],
@@ -6940,6 +6960,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				183
 			],
@@ -7015,6 +7037,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				185,
 				186,
@@ -7315,6 +7339,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				193
 			],
@@ -7953,6 +7979,8 @@
 			"population": 0,
 			"agricultural": 0,
 			"hasRings": false,
+			"heightMapFilename": "heightmaps/sol_extended_flat.hmap",
+			"heightMapFractal": 0,
 			"children": [
 				210
 			],

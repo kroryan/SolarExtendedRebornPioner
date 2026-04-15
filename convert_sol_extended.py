@@ -13,6 +13,7 @@ import json
 import math
 import re
 import shutil
+import struct
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,8 @@ ROOT = SCRIPT_DIR.parent
 LUA_PATH = SCRIPT_DIR / "00_sol.lua" if (SCRIPT_DIR / "00_sol.lua").exists() else ROOT / "00_sol_EXTENDED.lua"
 OUT_PATH = SCRIPT_DIR / "00_sol.json" if (SCRIPT_DIR / "00_sol.lua").exists() else ROOT / "pioneer" / "data" / "systems" / "custom" / "00_sol.json"
 BACKUP_PATH = OUT_PATH.with_name("00_sol_vanilla_2026_backup.json.disabled")
+FLAT_HEIGHTMAP_NAME = "heightmaps/sol_extended_flat.hmap"
+FLAT_HEIGHTMAP_PATH = SCRIPT_DIR / FLAT_HEIGHTMAP_NAME
 
 
 BODY_RE = re.compile(
@@ -65,9 +68,26 @@ STARPORT_PARENT_FIXES = {
     "Nereid Outlook": "Actaea",
 }
 
+FLAT_HEIGHTMAP_PARENTS = {
+    "1866 Sisyphus",
+    "Eros",
+    "Hygiea",
+    "1429 Pemba",
+    "1550 Tito",
+    "Thebe",
+    "624 Hektor",
+    "588 Achilles",
+    "1995 SN55",
+    "Janus",
+    "Ixion",
+    "Makemake",
+    "Hi'aka",
+    "Arrokoth",
+}
+
 SURFACE_COORD_FIXES = {
     "Achilles Outpost": (0.147975390945396, 3.18578110587282),
-    "Alexandria": (0.544544471951483, 0.522179822916428),
+    "Alexandria": (0.488692190558413, 0.575958653158129),
     "Amsterdam": (0.311950984304204, 4.88264074558787),
     "Anubis Outpost": (-0.307951568805545, 0.651611903019734),
     "Arden Base": (0.380353910250444, 1.84703734948535),
@@ -400,6 +420,25 @@ def apply_surface_coord_fixes(ordered: list[Body]) -> None:
             body.fields["orbitalOffset"] = longitude
 
 
+def apply_flat_heightmap_fixes(ordered: list[Body]) -> None:
+    by_name = {body.name: body for body in ordered}
+    for body_name in FLAT_HEIGHTMAP_PARENTS:
+        body = by_name.get(body_name)
+        if body:
+            body.fields["heightMapFilename"] = FLAT_HEIGHTMAP_NAME
+            body.fields["heightMapFractal"] = 0
+
+
+def write_flat_heightmap() -> None:
+    FLAT_HEIGHTMAP_PATH.parent.mkdir(parents=True, exist_ok=True)
+    width = 4
+    height = 4
+    elevation_meters = 10
+    payload = struct.pack("<HH", width, height)
+    payload += struct.pack("<" + ("h" * width * height), *([elevation_meters] * width * height))
+    FLAT_HEIGHTMAP_PATH.write_bytes(payload)
+
+
 def make_json(root: Body, ordered: list[Body]) -> dict[str, Any]:
     index = {body: idx for idx, body in enumerate(ordered)}
     body_nodes = []
@@ -474,10 +513,12 @@ def main() -> None:
     add_children(root, TableNode(parse_entries(lines, bodies_start + 1, main_end - 1, body_by_line)), variables, ordered)
     repair_legacy_hierarchy(ordered)
     apply_surface_coord_fixes(ordered)
+    apply_flat_heightmap_fixes(ordered)
 
     data = make_json(root, ordered)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    write_flat_heightmap()
     if OUT_PATH.exists() and not BACKUP_PATH.exists():
         shutil.copy2(OUT_PATH, BACKUP_PATH)
     OUT_PATH.write_text(json.dumps(data, indent="\t", ensure_ascii=False) + "\n", encoding="utf-8")

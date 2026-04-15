@@ -22,6 +22,7 @@ The converted system file, `00_sol.json`, defines a full extended Sol system wit
 ## Files
 
 - `00_sol.json`: modern Pioneer JSON system definition. This is the file to install for current Pioneer.
+- `heightmaps/sol_extended_flat.hmap`: small positive-height flat terrain map used for minor bodies whose procedural asteroid terrain causes Pioneer to auto-relocate surface ports.
 - `00_sol.lua`: original legacy Lua system definition kept for reference and regeneration.
 - `convert_sol_extended.py`: converter used to migrate the old `CustomSystem` / `CustomSystemBody` Lua syntax to JSON.
 - `README.md`: this documentation.
@@ -32,6 +33,7 @@ The converted system file, `00_sol.json`, defines a full extended Sol system wit
 - Keeps all 109 surface starports as surface starports.
 - Repairs legacy hierarchy issues where surface ports were attached to the wrong body.
 - Applies corrected latitude/longitude values for the surface ports reported by Pioneer as auto-relocated in the startup log.
+- Applies a small flat heightmap to selected minor bodies so their surface bases remain surface bases without triggering asteroid-terrain relocation warnings.
 - Keeps the original Lua file as source/reference, but the installable system file is `00_sol.json`.
 
 ## Install
@@ -42,12 +44,14 @@ Copy:
 
 ```text
 00_sol.json
+heightmaps/sol_extended_flat.hmap
 ```
 
 to:
 
 ```text
 Documents/Pioneer/mods/00_sol_EXTENDED/data/systems/custom/00_sol.json
+Documents/Pioneer/mods/00_sol_EXTENDED/data/heightmaps/sol_extended_flat.hmap
 ```
 
 Important: keep old Lua system files out of `Documents/Pioneer/mods/00_sol_EXTENDED/data/systems`. Pioneer can still recurse through that folder and load legacy Lua definitions, which can make the game appear to ignore the JSON version.
